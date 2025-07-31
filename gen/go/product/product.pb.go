@@ -441,7 +441,7 @@ const file_api_product_proto_rawDesc = "" +
 	"\aGetList\x12\x17.product.GetListRequest\x1a\x15.product.ListResponse\x12H\n" +
 	"\rCreateProduct\x12\x1d.product.CreateProductRequest\x1a\x18.product.ProductResponse\x12H\n" +
 	"\rUpdateProduct\x12\x1d.product.CreateProductRequest\x1a\x18.product.ProductResponse\x12K\n" +
-	"\rDeleteProduct\x12\x1a.product.GetProductRequest\x1a\x1e.product.DeleteProductResponseB\x0eZ\fapi/;productb\x06proto3"
+	"\rDeleteProduct\x12\x1a.product.GetProductRequest\x1a\x1e.product.DeleteProductResponseB\x19Z\x17gen/go/product/;productb\x06proto3"
 
 var (
 	file_api_product_proto_rawDescOnce sync.Once

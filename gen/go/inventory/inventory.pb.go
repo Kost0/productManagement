@@ -421,7 +421,7 @@ const file_api_inventory_proto_rawDesc = "" +
 	"\x0eGetListRemains\x12\x1d.inventory.ListRemainsRequest\x1a\x1e.inventory.ListRemainsResponse\x12I\n" +
 	"\fCreateRemain\x12\x1e.inventory.CreateRemainRequest\x1a\x19.inventory.RemainResponse\x12I\n" +
 	"\fDeleteRemain\x12\x18.inventory.RemainRequest\x1a\x1f.inventory.DeleteRemainResponse\x12H\n" +
-	"\vGiveToOrder\x12\x1e.inventory.UpdateRemainRequest\x1a\x19.inventory.RemainResponseB\x10Z\x0eapi/;inventoryb\x06proto3"
+	"\vGiveToOrder\x12\x1e.inventory.UpdateRemainRequest\x1a\x19.inventory.RemainResponseB\x1dZ\x1bgen/go/inventory/;inventoryb\x06proto3"
 
 var (
 	file_api_inventory_proto_rawDescOnce sync.Once

@@ -465,7 +465,7 @@ const file_api_user_proto_rawDesc = "" +
 	"\n" +
 	"UpdateUser\x12\x17.user.CreateUserRequest\x1a\x12.user.UserResponse\x12?\n" +
 	"\n" +
-	"DeleteUser\x12\x17.user.DeleteUserRequest\x1a\x18.user.DeleteUserResponseB\vZ\tapi/;userb\x06proto3"
+	"DeleteUser\x12\x17.user.DeleteUserRequest\x1a\x18.user.DeleteUserResponseB\x13Z\x11gen/go/user/;userb\x06proto3"
 
 var (
 	file_api_user_proto_rawDescOnce sync.Once

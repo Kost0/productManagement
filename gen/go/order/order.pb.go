@@ -328,8 +328,7 @@ const file_api_order_proto_rawDesc = "" +
 	"\bGetOrder\x12\x16.order.GetOrderRequest\x1a\x14.order.OrderResponse\x12A\n" +
 	"\n" +
 	"OrdersList\x12\x18.order.OrdersListRequest\x1a\x19.order.OrdersListResponse\x12>\n" +
-	"\vCreateOrder\x12\x19.order.CreateOrderRequest\x1a\x14.order.OrderResponseB\fZ\n" +
-	"api/;orderb\x06proto3"
+	"\vCreateOrder\x12\x19.order.CreateOrderRequest\x1a\x14.order.OrderResponseB\x15Z\x13gen/go/order/;orderb\x06proto3"
 
 var (
 	file_api_order_proto_rawDescOnce sync.Once
