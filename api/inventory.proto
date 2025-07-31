@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option go_package = "api/;inventory";
+
+package inventory;
+
+service InventoryService {
+  rpc GetRemains(RemainRequest) returns (RemainResponse);
+  rpc GetListRemains(ListRemainsRequest) returns (ListRemainsResponse);
+  rpc CreateRemain(CreateRemainRequest) returns (RemainResponse);
+  rpc DeleteRemain(RemainRequest) returns (DeleteRemainResponse);
+  rpc GiveToOrder(UpdateRemainRequest) returns (RemainResponse);
+}
+
+message RemainRequest {
+  int32 remain_id = 1;
+}
+
+message RemainResponse {
+  int32 remain_id = 1;
+  int32 product_id = 2;
+  int32 amount = 3;
+}
+
+message ListRemainsRequest {
+  int32 limit = 1;
+  int32 offset = 2;
+}
+
+message ListRemainsResponse {
+  repeated RemainResponse remains = 1;
+  int32 total_count = 2;
+}
+
+message CreateRemainRequest {
+  int32 product_id = 2;
+  int32 amount = 3;
+}
+
+message DeleteRemainResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message UpdateRemainRequest {
+  int32 product_id = 1;
+  int32 number = 2;
+}
