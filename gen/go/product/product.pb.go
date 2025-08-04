@@ -397,6 +397,98 @@ func (x *DeleteProductResponse) GetMessage() string {
 	return ""
 }
 
+type UpdateProductRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	ProductId     string                 `protobuf:"bytes,1,opt,name=product_id,json=productId,proto3" json:"product_id,omitempty"`
+	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Description   string                 `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
+	PriceBuy      int32                  `protobuf:"varint,4,opt,name=price_buy,json=priceBuy,proto3" json:"price_buy,omitempty"`
+	PriceSell     int32                  `protobuf:"varint,5,opt,name=price_sell,json=priceSell,proto3" json:"price_sell,omitempty"`
+	SupplierId    int32                  `protobuf:"varint,6,opt,name=supplier_id,json=supplierId,proto3" json:"supplier_id,omitempty"`
+	Weight        int32                  `protobuf:"varint,7,opt,name=weight,proto3" json:"weight,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *UpdateProductRequest) Reset() {
+	*x = UpdateProductRequest{}
+	mi := &file_api_product_proto_msgTypes[6]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *UpdateProductRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdateProductRequest) ProtoMessage() {}
+
+func (x *UpdateProductRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_product_proto_msgTypes[6]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdateProductRequest.ProtoReflect.Descriptor instead.
+func (*UpdateProductRequest) Descriptor() ([]byte, []int) {
+	return file_api_product_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *UpdateProductRequest) GetProductId() string {
+	if x != nil {
+		return x.ProductId
+	}
+	return ""
+}
+
+func (x *UpdateProductRequest) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *UpdateProductRequest) GetDescription() string {
+	if x != nil {
+		return x.Description
+	}
+	return ""
+}
+
+func (x *UpdateProductRequest) GetPriceBuy() int32 {
+	if x != nil {
+		return x.PriceBuy
+	}
+	return 0
+}
+
+func (x *UpdateProductRequest) GetPriceSell() int32 {
+	if x != nil {
+		return x.PriceSell
+	}
+	return 0
+}
+
+func (x *UpdateProductRequest) GetSupplierId() int32 {
+	if x != nil {
+		return x.SupplierId
+	}
+	return 0
+}
+
+func (x *UpdateProductRequest) GetWeight() int32 {
+	if x != nil {
+		return x.Weight
+	}
+	return 0
+}
+
 var File_api_product_proto protoreflect.FileDescriptor
 
 const file_api_product_proto_rawDesc = "" +
@@ -434,13 +526,24 @@ const file_api_product_proto_rawDesc = "" +
 	"\x06weight\x18\x06 \x01(\x05R\x06weight\"K\n" +
 	"\x15DeleteProductResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12\x18\n" +
-	"\amessage\x18\x02 \x01(\tR\amessage2\xf0\x02\n" +
+	"\amessage\x18\x02 \x01(\tR\amessage\"\xe0\x01\n" +
+	"\x14UpdateProductRequest\x12\x1d\n" +
+	"\n" +
+	"product_id\x18\x01 \x01(\tR\tproductId\x12\x12\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x12 \n" +
+	"\vdescription\x18\x03 \x01(\tR\vdescription\x12\x1b\n" +
+	"\tprice_buy\x18\x04 \x01(\x05R\bpriceBuy\x12\x1d\n" +
+	"\n" +
+	"price_sell\x18\x05 \x01(\x05R\tpriceSell\x12\x1f\n" +
+	"\vsupplier_id\x18\x06 \x01(\x05R\n" +
+	"supplierId\x12\x16\n" +
+	"\x06weight\x18\a \x01(\x05R\x06weight2\xf0\x02\n" +
 	"\x0eProductService\x12B\n" +
 	"\n" +
 	"GetProduct\x12\x1a.product.GetProductRequest\x1a\x18.product.ProductResponse\x129\n" +
 	"\aGetList\x12\x17.product.GetListRequest\x1a\x15.product.ListResponse\x12H\n" +
 	"\rCreateProduct\x12\x1d.product.CreateProductRequest\x1a\x18.product.ProductResponse\x12H\n" +
-	"\rUpdateProduct\x12\x1d.product.CreateProductRequest\x1a\x18.product.ProductResponse\x12K\n" +
+	"\rUpdateProduct\x12\x1d.product.UpdateProductRequest\x1a\x18.product.ProductResponse\x12K\n" +
 	"\rDeleteProduct\x12\x1a.product.GetProductRequest\x1a\x1e.product.DeleteProductResponseB\x19Z\x17gen/go/product/;productb\x06proto3"
 
 var (
@@ -455,7 +558,7 @@ func file_api_product_proto_rawDescGZIP() []byte {
 	return file_api_product_proto_rawDescData
 }
 
-var file_api_product_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_api_product_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_api_product_proto_goTypes = []any{
 	(*GetProductRequest)(nil),     // 0: product.GetProductRequest
 	(*ProductResponse)(nil),       // 1: product.ProductResponse
@@ -463,13 +566,14 @@ var file_api_product_proto_goTypes = []any{
 	(*ListResponse)(nil),          // 3: product.ListResponse
 	(*CreateProductRequest)(nil),  // 4: product.CreateProductRequest
 	(*DeleteProductResponse)(nil), // 5: product.DeleteProductResponse
+	(*UpdateProductRequest)(nil),  // 6: product.UpdateProductRequest
 }
 var file_api_product_proto_depIdxs = []int32{
 	1, // 0: product.ListResponse.products:type_name -> product.ProductResponse
 	0, // 1: product.ProductService.GetProduct:input_type -> product.GetProductRequest
 	2, // 2: product.ProductService.GetList:input_type -> product.GetListRequest
 	4, // 3: product.ProductService.CreateProduct:input_type -> product.CreateProductRequest
-	4, // 4: product.ProductService.UpdateProduct:input_type -> product.CreateProductRequest
+	6, // 4: product.ProductService.UpdateProduct:input_type -> product.UpdateProductRequest
 	0, // 5: product.ProductService.DeleteProduct:input_type -> product.GetProductRequest
 	1, // 6: product.ProductService.GetProduct:output_type -> product.ProductResponse
 	3, // 7: product.ProductService.GetList:output_type -> product.ListResponse
@@ -494,7 +598,7 @@ func file_api_product_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_api_product_proto_rawDesc), len(file_api_product_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   6,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

@@ -8,7 +8,7 @@ service ProductService {
   rpc GetProduct(GetProductRequest) returns (ProductResponse);
   rpc GetList(GetListRequest) returns (ListResponse);
   rpc CreateProduct(CreateProductRequest) returns (ProductResponse);
-  rpc UpdateProduct(CreateProductRequest) returns (ProductResponse);
+  rpc UpdateProduct(UpdateProductRequest) returns (ProductResponse);
   rpc DeleteProduct(GetProductRequest) returns (DeleteProductResponse);
 }
 
@@ -48,4 +48,14 @@ message CreateProductRequest {
 message DeleteProductResponse {
   bool success = 1;
   string message = 2;
+}
+
+message UpdateProductRequest {
+  string product_id = 1;
+  string name = 2;
+  string description = 3;
+  int32 price_buy = 4;
+  int32 price_sell = 5;
+  int32 supplier_id = 6;
+  int32 weight = 7;
 }
